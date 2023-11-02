@@ -34,11 +34,12 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            GirisYapButonu = new Button();
             button4 = new Button();
             Kullanıcı_girişi = new Button();
             Yetkili_polis_girişi = new Button();
             Admin_Girişi = new Button();
+            AdminGirisiYapButonu = new Button();
+            YetkiliPolisGirisiYap = new Button();
             SuspendLayout();
             // 
             // button2
@@ -103,18 +104,6 @@
             label1.Text = "Kullanıcı adı : ";
             label1.Visible = false;
             // 
-            // GirisYapButonu
-            // 
-            GirisYapButonu.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            GirisYapButonu.Location = new Point(237, 539);
-            GirisYapButonu.Name = "GirisYapButonu";
-            GirisYapButonu.Size = new Size(158, 70);
-            GirisYapButonu.TabIndex = 49;
-            GirisYapButonu.Text = "GİRİŞ YAP";
-            GirisYapButonu.UseVisualStyleBackColor = true;
-            GirisYapButonu.Visible = false;
-            GirisYapButonu.Click += GirisYapButonu_Click;
-            // 
             // button4
             // 
             button4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
@@ -159,18 +148,43 @@
             Admin_Girişi.UseVisualStyleBackColor = true;
             Admin_Girişi.Click += Admin_Girişi_Click;
             // 
+            // AdminGirisiYapButonu
+            // 
+            AdminGirisiYapButonu.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            AdminGirisiYapButonu.Location = new Point(63, 561);
+            AdminGirisiYapButonu.Name = "AdminGirisiYapButonu";
+            AdminGirisiYapButonu.Size = new Size(181, 86);
+            AdminGirisiYapButonu.TabIndex = 57;
+            AdminGirisiYapButonu.Text = " ADMİN GİRİŞİ YAP";
+            AdminGirisiYapButonu.UseVisualStyleBackColor = true;
+            AdminGirisiYapButonu.Visible = false;
+            AdminGirisiYapButonu.Click += AdminGirisiYapButonu_Click;
+            // 
+            // YetkiliPolisGirisiYap
+            // 
+            YetkiliPolisGirisiYap.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            YetkiliPolisGirisiYap.Location = new Point(382, 561);
+            YetkiliPolisGirisiYap.Name = "YetkiliPolisGirisiYap";
+            YetkiliPolisGirisiYap.Size = new Size(181, 86);
+            YetkiliPolisGirisiYap.TabIndex = 58;
+            YetkiliPolisGirisiYap.Text = "YETKİLİ POLİS GİRİŞİ YAP";
+            YetkiliPolisGirisiYap.UseVisualStyleBackColor = true;
+            YetkiliPolisGirisiYap.Visible = false;
+            YetkiliPolisGirisiYap.Click += YetkiliPolisGirisiYap_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1127, 712);
+            Controls.Add(YetkiliPolisGirisiYap);
+            Controls.Add(AdminGirisiYapButonu);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(GirisYapButonu);
             Controls.Add(button4);
             Controls.Add(Kullanıcı_girişi);
             Controls.Add(Yetkili_polis_girişi);
@@ -190,10 +204,11 @@
         private TextBox textBox1;
         private Label label2;
         private Label label1;
-        private Button GirisYapButonu;
         private Button button4;
         private Button Kullanıcı_girişi;
         private Button Yetkili_polis_girişi;
         private Button Admin_Girişi;
+        private Button AdminGirisiYapButonu;
+        private Button YetkiliPolisGirisiYap;
     }
 }

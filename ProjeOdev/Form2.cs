@@ -25,7 +25,7 @@ namespace ProjeOdev
         {
 
         new CezaBilgisi
-        {
+        { 
             Plaka = "34 ABC 123",
             CezaTuru = "Hız Sınırı İhlali",
             CezaMiktari = 200.0m,

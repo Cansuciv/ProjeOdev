@@ -24,19 +24,21 @@ namespace ProjeOdev
             label2.Visible = true;
             textBox1.Visible = true;
             textBox2.Visible = true;
-            GirisYapButonu.Visible = true;
+            AdminGirisiYapButonu.Visible = true;
 
             label1.Location = new Point(350, 300);
             label2.Location = new Point(350, 400);
             textBox1.Location = new Point(560, 300);
             textBox2.Location = new Point(560, 400);
-            GirisYapButonu.Location = new Point(500, 500);
+            AdminGirisiYapButonu.Location = new Point(500, 500);
         }
 
-        private void GirisYapButonu_Click(object sender, EventArgs e)
+
+        private void AdminGirisiYapButonu_Click(object sender, EventArgs e)
         {
             Form2 AdminGiris = new Form2();
             AdminGiris.Show();
+
         }
 
         private void Yetkili_polis_giriþi_Click(object sender, EventArgs e)
@@ -51,17 +53,22 @@ namespace ProjeOdev
             label2.Visible = true;
             textBox1.Visible = true;
             textBox2.Visible = true;
-            GirisYapButonu.Visible = true;
+            YetkiliPolisGirisiYap.Visible = true;
 
             label1.Location = new Point(350, 300);
             label2.Location = new Point(350, 400);
             textBox1.Location = new Point(560, 300);
             textBox2.Location = new Point(560, 400);
-            GirisYapButonu.Location = new Point(500, 500);
+            YetkiliPolisGirisiYap.Location = new Point(500, 500);
 
-            //Form3 PolisGiris = new Form3();
-            //PolisGiris.Show();
         }
+
+        private void YetkiliPolisGirisiYap_Click(object sender, EventArgs e)
+        {
+            Form3 PolisGiris = new Form3();
+            PolisGiris.Show();
+        }
+
 
         private void Kullanýcý_giriþi_Click(object sender, EventArgs e)
         {
