@@ -23,6 +23,7 @@ namespace ProjeOdev
 
         List<CezaBilgisi> cezaListesi = new List<CezaBilgisi>
         {
+
         new CezaBilgisi
         {
             Plaka = "34 ABC 123",
