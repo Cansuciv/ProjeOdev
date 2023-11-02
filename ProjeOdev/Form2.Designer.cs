@@ -28,22 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
             label1 = new Label();
             CezaBilgisiOgren = new Button();
             CezaSil = new Button();
             CezaDüzenle = new Button();
             button4 = new Button();
+            labelCezaSonOdemeTarihi = new Label();
+            labelCezaGirisTarihi = new Label();
+            labelCezaMiktari = new Label();
+            labelCezaTuru = new Label();
+            labelPlaka = new Label();
+            SorgulaButton = new Button();
+            CezaSilButton = new Button();
+            AraButton = new Button();
+            textBox1 = new TextBox();
             SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(311, 449);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(235, 39);
-            textBox1.TabIndex = 51;
-            textBox1.Visible = false;
             // 
             // label1
             // 
@@ -98,13 +97,122 @@
             button4.TabIndex = 46;
             button4.Text = "KAPAT";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // labelCezaSonOdemeTarihi
+            // 
+            labelCezaSonOdemeTarihi.AutoSize = true;
+            labelCezaSonOdemeTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCezaSonOdemeTarihi.Location = new Point(194, 552);
+            labelCezaSonOdemeTarihi.Name = "labelCezaSonOdemeTarihi";
+            labelCezaSonOdemeTarihi.Size = new Size(65, 28);
+            labelCezaSonOdemeTarihi.TabIndex = 57;
+            labelCezaSonOdemeTarihi.Text = "label6";
+            labelCezaSonOdemeTarihi.Visible = false;
+            // 
+            // labelCezaGirisTarihi
+            // 
+            labelCezaGirisTarihi.AutoSize = true;
+            labelCezaGirisTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCezaGirisTarihi.Location = new Point(194, 503);
+            labelCezaGirisTarihi.Name = "labelCezaGirisTarihi";
+            labelCezaGirisTarihi.Size = new Size(65, 28);
+            labelCezaGirisTarihi.TabIndex = 56;
+            labelCezaGirisTarihi.Text = "label5";
+            labelCezaGirisTarihi.Visible = false;
+            // 
+            // labelCezaMiktari
+            // 
+            labelCezaMiktari.AutoSize = true;
+            labelCezaMiktari.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCezaMiktari.Location = new Point(86, 593);
+            labelCezaMiktari.Name = "labelCezaMiktari";
+            labelCezaMiktari.Size = new Size(65, 28);
+            labelCezaMiktari.TabIndex = 55;
+            labelCezaMiktari.Text = "label4";
+            labelCezaMiktari.Visible = false;
+            // 
+            // labelCezaTuru
+            // 
+            labelCezaTuru.AutoSize = true;
+            labelCezaTuru.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelCezaTuru.Location = new Point(86, 552);
+            labelCezaTuru.Name = "labelCezaTuru";
+            labelCezaTuru.Size = new Size(65, 28);
+            labelCezaTuru.TabIndex = 54;
+            labelCezaTuru.Text = "label3";
+            labelCezaTuru.Visible = false;
+            // 
+            // labelPlaka
+            // 
+            labelPlaka.AutoSize = true;
+            labelPlaka.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPlaka.Location = new Point(86, 503);
+            labelPlaka.Name = "labelPlaka";
+            labelPlaka.Size = new Size(65, 28);
+            labelPlaka.TabIndex = 53;
+            labelPlaka.Text = "label2";
+            labelPlaka.Visible = false;
+            // 
+            // SorgulaButton
+            // 
+            SorgulaButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            SorgulaButton.Location = new Point(328, 571);
+            SorgulaButton.Name = "SorgulaButton";
+            SorgulaButton.Size = new Size(163, 50);
+            SorgulaButton.TabIndex = 52;
+            SorgulaButton.Text = "SORGULA";
+            SorgulaButton.UseVisualStyleBackColor = true;
+            SorgulaButton.Visible = false;
+            SorgulaButton.Click += SorgulaButton_Click;
+            // 
+            // CezaSilButton
+            // 
+            CezaSilButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            CezaSilButton.Location = new Point(582, 579);
+            CezaSilButton.Name = "CezaSilButton";
+            CezaSilButton.Size = new Size(163, 50);
+            CezaSilButton.TabIndex = 59;
+            CezaSilButton.Text = "CEZA SİL";
+            CezaSilButton.UseVisualStyleBackColor = true;
+            CezaSilButton.Visible = false;
+            CezaSilButton.Click += CezaSilButton_Click;
+            // 
+            // AraButton
+            // 
+            AraButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            AraButton.Location = new Point(582, 465);
+            AraButton.Name = "AraButton";
+            AraButton.Size = new Size(163, 50);
+            AraButton.TabIndex = 58;
+            AraButton.Text = "ARA";
+            AraButton.UseVisualStyleBackColor = true;
+            AraButton.Visible = false;
+            AraButton.Click += AraButton_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(302, 447);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(235, 39);
+            textBox1.TabIndex = 60;
+            textBox1.Visible = false;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(979, 692);
+            ClientSize = new Size(979, 684);
             Controls.Add(textBox1);
+            Controls.Add(CezaSilButton);
+            Controls.Add(AraButton);
+            Controls.Add(labelCezaSonOdemeTarihi);
+            Controls.Add(labelCezaGirisTarihi);
+            Controls.Add(labelCezaMiktari);
+            Controls.Add(labelCezaTuru);
+            Controls.Add(labelPlaka);
+            Controls.Add(SorgulaButton);
             Controls.Add(label1);
             Controls.Add(CezaBilgisiOgren);
             Controls.Add(CezaSil);
@@ -118,12 +226,19 @@
         }
 
         #endregion
-
-        private TextBox textBox1;
         private Label label1;
         private Button CezaBilgisiOgren;
         private Button CezaSil;
         private Button CezaDüzenle;
         private Button button4;
+        private Label labelCezaSonOdemeTarihi;
+        private Label labelCezaGirisTarihi;
+        private Label labelCezaMiktari;
+        private Label labelCezaTuru;
+        private Label labelPlaka;
+        private Button SorgulaButton;
+        private Button CezaSilButton;
+        private Button AraButton;
+        private TextBox textBox1;
     }
 }
