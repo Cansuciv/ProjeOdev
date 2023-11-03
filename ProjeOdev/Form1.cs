@@ -78,13 +78,49 @@ namespace ProjeOdev
             Admin_Giriþi.Visible = false;
             Yetkili_polis_giriþi.Visible = false;
 
+            label1.Visible = true;
+            label2.Visible = true;
+            textBox1.Visible = true;
+            textBox2.Visible = true;
+            KullaniciÜyeOlButton.Visible = true;
+            GirisYapButton.Visible = true;
 
-            button1.Visible = true;
-            button2.Visible = true;
-
-            button1.Location = new Point(450, 300);
-            button2.Location = new Point(450, 430);
+            label1.Location = new Point(350, 250);
+            label2.Location = new Point(350, 330);
+            textBox1.Location = new Point(560, 250);
+            textBox2.Location = new Point(560, 330);
+            GirisYapButton.Location = new Point(450, 400);
+            KullaniciÜyeOlButton.Location = new Point(450, 530);
         }
+
+        private void GirisYapButton_Click(object sender, EventArgs e)
+        {
+            Form4 KullaniciGirisEkrani = new Form4();
+            KullaniciGirisEkrani.Show();
+        }
+
+        private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
+        {
+            GirisYapButton.Visible=false;
+
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            textBox1.Visible = true;
+            textBox2.Visible = true;
+            textBox3.Visible = true;
+
+            label1.Location = new Point(350, 330);
+            label2.Location = new Point(350, 410);
+            label3.Location = new Point(350, 250);
+            textBox1.Location = new Point(560, 330);
+            textBox2.Location = new Point(560, 410);
+            textBox3.Location = new Point(560, 250);
+
+
+
+        }
+
 
         private void button4_Click(object sender, EventArgs e)
         {

@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
+            KullaniciÜyeOlButton = new Button();
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             label2 = new Label();
@@ -40,29 +39,22 @@
             Admin_Girişi = new Button();
             AdminGirisiYapButonu = new Button();
             YetkiliPolisGirisiYap = new Button();
+            GirisYapButton = new Button();
+            label3 = new Label();
+            textBox3 = new TextBox();
             SuspendLayout();
             // 
-            // button2
+            // KullaniciÜyeOlButton
             // 
-            button2.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(728, 455);
-            button2.Name = "button2";
-            button2.Size = new Size(223, 73);
-            button2.TabIndex = 55;
-            button2.Text = "ÜYE OL";
-            button2.UseVisualStyleBackColor = true;
-            button2.Visible = false;
-            // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(728, 360);
-            button1.Name = "button1";
-            button1.Size = new Size(223, 73);
-            button1.TabIndex = 54;
-            button1.Text = "GİRİŞ YAP";
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
+            KullaniciÜyeOlButton.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            KullaniciÜyeOlButton.Location = new Point(811, 475);
+            KullaniciÜyeOlButton.Name = "KullaniciÜyeOlButton";
+            KullaniciÜyeOlButton.Size = new Size(223, 73);
+            KullaniciÜyeOlButton.TabIndex = 55;
+            KullaniciÜyeOlButton.Text = "ÜYE OL";
+            KullaniciÜyeOlButton.UseVisualStyleBackColor = true;
+            KullaniciÜyeOlButton.Visible = false;
+            KullaniciÜyeOlButton.Click += KullaniciÜyeOlButton_Click;
             // 
             // textBox2
             // 
@@ -172,15 +164,49 @@
             YetkiliPolisGirisiYap.Visible = false;
             YetkiliPolisGirisiYap.Click += YetkiliPolisGirisiYap_Click;
             // 
+            // GirisYapButton
+            // 
+            GirisYapButton.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            GirisYapButton.Location = new Point(811, 360);
+            GirisYapButton.Name = "GirisYapButton";
+            GirisYapButton.Size = new Size(223, 73);
+            GirisYapButton.TabIndex = 59;
+            GirisYapButton.Text = "Giriş Yap";
+            GirisYapButton.UseVisualStyleBackColor = true;
+            GirisYapButton.Visible = false;
+            GirisYapButton.Click += GirisYapButton_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(12, 341);
+            label3.Name = "label3";
+            label3.Size = new Size(295, 46);
+            label3.TabIndex = 60;
+            label3.Text = "Telefon Numarası :";
+            label3.Visible = false;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(313, 341);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(279, 43);
+            textBox3.TabIndex = 61;
+            textBox3.Visible = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1127, 712);
+            Controls.Add(textBox3);
+            Controls.Add(label3);
+            Controls.Add(GirisYapButton);
             Controls.Add(YetkiliPolisGirisiYap);
             Controls.Add(AdminGirisiYapButonu);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(KullaniciÜyeOlButton);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -198,8 +224,7 @@
 
         #endregion
 
-        private Button button2;
-        private Button button1;
+        private Button KullaniciÜyeOlButton;
         private TextBox textBox2;
         private TextBox textBox1;
         private Label label2;
@@ -210,5 +235,8 @@
         private Button Admin_Girişi;
         private Button AdminGirisiYapButonu;
         private Button YetkiliPolisGirisiYap;
+        private Button GirisYapButton;
+        private Label label3;
+        private TextBox textBox3;
     }
 }
