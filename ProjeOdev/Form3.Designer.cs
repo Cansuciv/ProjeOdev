@@ -56,56 +56,63 @@
             textBox8 = new TextBox();
             EkleButton = new Button();
             CezaSilButton = new Button();
+            AnaSayfaButton = new Button();
+            YetkiliPolisSayfasinaDon = new Button();
             SuspendLayout();
             // 
             // CezaBilgisiOgren
             // 
+            CezaBilgisiOgren.BackColor = Color.DarkSalmon;
             CezaBilgisiOgren.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaBilgisiOgren.Location = new Point(206, 45);
+            CezaBilgisiOgren.Location = new Point(220, 202);
             CezaBilgisiOgren.Name = "CezaBilgisiOgren";
             CezaBilgisiOgren.Size = new Size(274, 124);
             CezaBilgisiOgren.TabIndex = 52;
             CezaBilgisiOgren.Text = "Ceza Bilgisi Öğren";
-            CezaBilgisiOgren.UseVisualStyleBackColor = true;
+            CezaBilgisiOgren.UseVisualStyleBackColor = false;
             CezaBilgisiOgren.Click += CezaBilgisiOgren_Click;
             // 
             // CezaSil
             // 
+            CezaSil.BackColor = Color.DarkSalmon;
             CezaSil.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaSil.Location = new Point(390, 217);
+            CezaSil.Location = new Point(404, 374);
             CezaSil.Name = "CezaSil";
             CezaSil.Size = new Size(274, 124);
             CezaSil.TabIndex = 51;
             CezaSil.Text = "Ceza Sil";
-            CezaSil.UseVisualStyleBackColor = true;
+            CezaSil.UseVisualStyleBackColor = false;
             CezaSil.Click += CezaSil_Click;
             // 
             // CezaEkle
             // 
+            CezaEkle.BackColor = Color.DarkSalmon;
             CezaEkle.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaEkle.Location = new Point(578, 42);
+            CezaEkle.Location = new Point(592, 199);
             CezaEkle.Name = "CezaEkle";
             CezaEkle.Size = new Size(274, 130);
             CezaEkle.TabIndex = 50;
             CezaEkle.Text = "Ceza Ekle";
-            CezaEkle.UseVisualStyleBackColor = true;
+            CezaEkle.UseVisualStyleBackColor = false;
             CezaEkle.Click += CezaEkle_Click;
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.GradientActiveCaption;
             button4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.Location = new Point(945, 646);
+            button4.Location = new Point(984, 649);
             button4.Name = "button4";
             button4.Size = new Size(113, 53);
             button4.TabIndex = 53;
             button4.Text = "KAPAT";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.PowderBlue;
             textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(241, 369);
+            textBox1.Location = new Point(272, 511);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(235, 39);
             textBox1.TabIndex = 68;
@@ -114,8 +121,9 @@
             // labelCezaSonOdemeTarihi
             // 
             labelCezaSonOdemeTarihi.AutoSize = true;
+            labelCezaSonOdemeTarihi.BackColor = Color.DarkGray;
             labelCezaSonOdemeTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaSonOdemeTarihi.Location = new Point(133, 474);
+            labelCezaSonOdemeTarihi.Location = new Point(145, 608);
             labelCezaSonOdemeTarihi.Name = "labelCezaSonOdemeTarihi";
             labelCezaSonOdemeTarihi.Size = new Size(65, 28);
             labelCezaSonOdemeTarihi.TabIndex = 67;
@@ -125,8 +133,9 @@
             // labelCezaGirisTarihi
             // 
             labelCezaGirisTarihi.AutoSize = true;
+            labelCezaGirisTarihi.BackColor = Color.DarkGray;
             labelCezaGirisTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaGirisTarihi.Location = new Point(133, 425);
+            labelCezaGirisTarihi.Location = new Point(145, 559);
             labelCezaGirisTarihi.Name = "labelCezaGirisTarihi";
             labelCezaGirisTarihi.Size = new Size(65, 28);
             labelCezaGirisTarihi.TabIndex = 66;
@@ -136,8 +145,9 @@
             // labelCezaMiktari
             // 
             labelCezaMiktari.AutoSize = true;
+            labelCezaMiktari.BackColor = Color.DarkGray;
             labelCezaMiktari.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaMiktari.Location = new Point(25, 515);
+            labelCezaMiktari.Location = new Point(37, 649);
             labelCezaMiktari.Name = "labelCezaMiktari";
             labelCezaMiktari.Size = new Size(65, 28);
             labelCezaMiktari.TabIndex = 65;
@@ -147,8 +157,9 @@
             // labelCezaTuru
             // 
             labelCezaTuru.AutoSize = true;
+            labelCezaTuru.BackColor = Color.DarkGray;
             labelCezaTuru.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaTuru.Location = new Point(25, 474);
+            labelCezaTuru.Location = new Point(37, 608);
             labelCezaTuru.Name = "labelCezaTuru";
             labelCezaTuru.Size = new Size(65, 28);
             labelCezaTuru.TabIndex = 64;
@@ -158,8 +169,9 @@
             // labelPlaka
             // 
             labelPlaka.AutoSize = true;
+            labelPlaka.BackColor = Color.DarkGray;
             labelPlaka.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPlaka.Location = new Point(25, 425);
+            labelPlaka.Location = new Point(37, 559);
             labelPlaka.Name = "labelPlaka";
             labelPlaka.Size = new Size(65, 28);
             labelPlaka.TabIndex = 63;
@@ -168,21 +180,23 @@
             // 
             // SorgulaButton
             // 
+            SorgulaButton.BackColor = Color.Khaki;
             SorgulaButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            SorgulaButton.Location = new Point(267, 493);
+            SorgulaButton.Location = new Point(281, 604);
             SorgulaButton.Name = "SorgulaButton";
             SorgulaButton.Size = new Size(163, 50);
             SorgulaButton.TabIndex = 62;
             SorgulaButton.Text = "SORGULA";
-            SorgulaButton.UseVisualStyleBackColor = true;
+            SorgulaButton.UseVisualStyleBackColor = false;
             SorgulaButton.Visible = false;
             SorgulaButton.Click += SorgulaButton_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = Color.PowderBlue;
             label1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(6, 369);
+            label1.Location = new Point(37, 511);
             label1.Name = "label1";
             label1.Size = new Size(220, 37);
             label1.TabIndex = 61;
@@ -192,8 +206,9 @@
             // Sehir
             // 
             Sehir.AutoSize = true;
+            Sehir.BackColor = SystemColors.InactiveCaption;
             Sehir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Sehir.Location = new Point(620, 380);
+            Sehir.Location = new Point(728, 422);
             Sehir.Name = "Sehir";
             Sehir.Size = new Size(70, 28);
             Sehir.TabIndex = 69;
@@ -203,8 +218,9 @@
             // Ilce
             // 
             Ilce.AutoSize = true;
+            Ilce.BackColor = SystemColors.InactiveCaption;
             Ilce.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Ilce.Location = new Point(635, 425);
+            Ilce.Location = new Point(743, 467);
             Ilce.Name = "Ilce";
             Ilce.Size = new Size(55, 28);
             Ilce.TabIndex = 70;
@@ -214,8 +230,9 @@
             // Plaka
             // 
             Plaka.AutoSize = true;
+            Plaka.BackColor = SystemColors.InactiveCaption;
             Plaka.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Plaka.Location = new Point(620, 463);
+            Plaka.Location = new Point(728, 505);
             Plaka.Name = "Plaka";
             Plaka.Size = new Size(72, 28);
             Plaka.TabIndex = 71;
@@ -225,8 +242,9 @@
             // CezaTuru
             // 
             CezaTuru.AutoSize = true;
+            CezaTuru.BackColor = SystemColors.InactiveCaption;
             CezaTuru.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaTuru.Location = new Point(581, 507);
+            CezaTuru.Location = new Point(689, 549);
             CezaTuru.Name = "CezaTuru";
             CezaTuru.Size = new Size(111, 28);
             CezaTuru.TabIndex = 72;
@@ -236,8 +254,9 @@
             // CezaMiktarı
             // 
             CezaMiktarı.AutoSize = true;
+            CezaMiktarı.BackColor = SystemColors.InactiveCaption;
             CezaMiktarı.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaMiktarı.Location = new Point(563, 554);
+            CezaMiktarı.Location = new Point(671, 596);
             CezaMiktarı.Name = "CezaMiktarı";
             CezaMiktarı.Size = new Size(129, 28);
             CezaMiktarı.TabIndex = 73;
@@ -247,8 +266,9 @@
             // CezaGirişTarihi
             // 
             CezaGirişTarihi.AutoSize = true;
+            CezaGirişTarihi.BackColor = SystemColors.InactiveCaption;
             CezaGirişTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaGirişTarihi.Location = new Point(535, 599);
+            CezaGirişTarihi.Location = new Point(643, 641);
             CezaGirişTarihi.Name = "CezaGirişTarihi";
             CezaGirişTarihi.Size = new Size(157, 28);
             CezaGirişTarihi.TabIndex = 74;
@@ -258,8 +278,9 @@
             // CezaSonÖdemeTarihi
             // 
             CezaSonÖdemeTarihi.AutoSize = true;
+            CezaSonÖdemeTarihi.BackColor = SystemColors.InactiveCaption;
             CezaSonÖdemeTarihi.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaSonÖdemeTarihi.Location = new Point(471, 646);
+            CezaSonÖdemeTarihi.Location = new Point(579, 688);
             CezaSonÖdemeTarihi.Name = "CezaSonÖdemeTarihi";
             CezaSonÖdemeTarihi.Size = new Size(221, 28);
             CezaSonÖdemeTarihi.TabIndex = 75;
@@ -268,89 +289,131 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(696, 384);
+            textBox2.BackColor = SystemColors.InactiveCaption;
+            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox2.Location = new Point(804, 419);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 27);
+            textBox2.Size = new Size(166, 34);
             textBox2.TabIndex = 76;
             textBox2.Visible = false;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(696, 429);
+            textBox3.BackColor = SystemColors.InactiveCaption;
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(804, 464);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(166, 27);
+            textBox3.Size = new Size(166, 34);
             textBox3.TabIndex = 77;
             textBox3.Visible = false;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(696, 467);
+            textBox4.BackColor = SystemColors.InactiveCaption;
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.Location = new Point(804, 504);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(166, 27);
+            textBox4.Size = new Size(166, 34);
             textBox4.TabIndex = 78;
             textBox4.Visible = false;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(696, 511);
+            textBox5.BackColor = SystemColors.InactiveCaption;
+            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.Location = new Point(804, 544);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(166, 27);
+            textBox5.Size = new Size(166, 34);
             textBox5.TabIndex = 79;
             textBox5.Visible = false;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(698, 558);
+            textBox6.BackColor = SystemColors.InactiveCaption;
+            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox6.Location = new Point(806, 590);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(166, 27);
+            textBox6.Size = new Size(166, 34);
             textBox6.TabIndex = 80;
             textBox6.Visible = false;
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(698, 603);
+            textBox7.BackColor = SystemColors.InactiveCaption;
+            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox7.Location = new Point(806, 637);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(166, 27);
+            textBox7.Size = new Size(166, 34);
             textBox7.TabIndex = 81;
             textBox7.Visible = false;
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(698, 647);
+            textBox8.BackColor = SystemColors.InactiveCaption;
+            textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox8.Location = new Point(806, 682);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(166, 27);
+            textBox8.Size = new Size(166, 34);
             textBox8.TabIndex = 82;
             textBox8.Visible = false;
             // 
             // EkleButton
             // 
+            EkleButton.BackColor = Color.Khaki;
             EkleButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            EkleButton.Location = new Point(891, 511);
+            EkleButton.Location = new Point(131, 664);
             EkleButton.Name = "EkleButton";
             EkleButton.Size = new Size(144, 52);
             EkleButton.TabIndex = 83;
             EkleButton.Text = "Ceza Ekle";
-            EkleButton.UseVisualStyleBackColor = true;
+            EkleButton.UseVisualStyleBackColor = false;
             EkleButton.Visible = false;
             EkleButton.Click += EkleButton_Click;
             // 
             // CezaSilButton
             // 
+            CezaSilButton.BackColor = Color.Khaki;
             CezaSilButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaSilButton.Location = new Point(161, 646);
+            CezaSilButton.Location = new Point(281, 666);
             CezaSilButton.Name = "CezaSilButton";
             CezaSilButton.Size = new Size(163, 50);
             CezaSilButton.TabIndex = 84;
             CezaSilButton.Text = "CEZA SİL";
-            CezaSilButton.UseVisualStyleBackColor = true;
+            CezaSilButton.UseVisualStyleBackColor = false;
             CezaSilButton.Visible = false;
             CezaSilButton.Click += CezaSilButton_Click;
+            // 
+            // AnaSayfaButton
+            // 
+            AnaSayfaButton.BackColor = Color.DarkSeaGreen;
+            AnaSayfaButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            AnaSayfaButton.Location = new Point(25, 12);
+            AnaSayfaButton.Name = "AnaSayfaButton";
+            AnaSayfaButton.Size = new Size(170, 80);
+            AnaSayfaButton.TabIndex = 85;
+            AnaSayfaButton.Text = "ANA SAYFA";
+            AnaSayfaButton.UseVisualStyleBackColor = false;
+            AnaSayfaButton.Click += AnaSayfaButton_Click;
+            // 
+            // YetkiliPolisSayfasinaDon
+            // 
+            YetkiliPolisSayfasinaDon.BackColor = Color.DarkSeaGreen;
+            YetkiliPolisSayfasinaDon.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            YetkiliPolisSayfasinaDon.Location = new Point(833, 12);
+            YetkiliPolisSayfasinaDon.Name = "YetkiliPolisSayfasinaDon";
+            YetkiliPolisSayfasinaDon.Size = new Size(241, 85);
+            YetkiliPolisSayfasinaDon.TabIndex = 88;
+            YetkiliPolisSayfasinaDon.Text = "YETKİLİ POLİS SAYFASINA DÖN";
+            YetkiliPolisSayfasinaDon.UseVisualStyleBackColor = false;
+            YetkiliPolisSayfasinaDon.Click += YetkiliPolisSayfasinaDon_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1087, 737);
+            ClientSize = new Size(1109, 737);
+            Controls.Add(YetkiliPolisSayfasinaDon);
+            Controls.Add(AnaSayfaButton);
             Controls.Add(CezaSilButton);
             Controls.Add(EkleButton);
             Controls.Add(textBox8);
@@ -382,6 +445,7 @@
             Name = "Form3";
             Text = "Form3";
             Load += Form3_Load;
+            Paint += Form3_Paint;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -416,5 +480,7 @@
         private TextBox textBox8;
         private Button EkleButton;
         private Button CezaSilButton;
+        private Button AnaSayfaButton;
+        private Button YetkiliPolisSayfasinaDon;
     }
 }

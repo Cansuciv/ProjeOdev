@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,14 @@ namespace ProjeOdev
             public string CezaTuru { get; set; }
             public decimal CezaMiktari { get; set; }
             public DateTime CezaGirisTarihi { get; set; }
-            public DateTime CezaSonOdemeTarihi { get; set; }
+            public DateTime CezaSonOdemeTarihi { get; set; } 
         }
 
         List<CezaBilgisi> cezaListesi = new List<CezaBilgisi>
         {
 
         new CezaBilgisi
-        { 
+        {
             Plaka = "34 ABC 123",
             CezaTuru = "Hız Sınırı İhlali",
             CezaMiktari = 200.0m,
@@ -50,7 +51,6 @@ namespace ProjeOdev
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
         }
 
         private void CezaBilgisiOgren_Click(object sender, EventArgs e)
@@ -65,7 +65,7 @@ namespace ProjeOdev
             SorgulaButton.Visible = true;
 
             label1.Location = new Point(300, 250);
-            textBox1.Location = new Point(520, 250);
+            textBox1.Location = new Point(550, 250);
             SorgulaButton.Location = new Point(450, 400);
 
         }
@@ -115,7 +115,7 @@ namespace ProjeOdev
             AraButton.Visible = true;
 
             label1.Location = new Point(300, 250);
-            textBox1.Location = new Point(520, 250);
+            textBox1.Location = new Point(550, 250);
             SorgulaButton.Location = new Point(450, 400);
             AraButton.Location = new Point(450, 400);
 
@@ -168,7 +168,7 @@ namespace ProjeOdev
             CezaSilButton.Visible = true;
 
             label1.Location = new Point(300, 250);
-            textBox1.Location = new Point(520, 250);
+            textBox1.Location = new Point(550, 250);
             SorgulaButton.Location = new Point(450, 400);
             CezaSilButton.Location = new Point(450, 400);
         }
@@ -203,8 +203,52 @@ namespace ProjeOdev
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
+        private void Form2_Paint(object sender, PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(255, 192, 192), Color.FromArgb(255, 255, 192), 45f))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void AnaSayfaButton_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            Form1 form1 = new Form1();
+            form1.ShowDialog(); 
+            this.Close(); 
+        }
+
+        private void AdminSayfasinaDon_Click(object sender, EventArgs e)
+        {
+            CezaBilgisiOgren.Top = 158;
+            CezaBilgisiOgren.Left = 236;
+
+            CezaDüzenle.Top = 155;
+            CezaDüzenle.Left = 608;
+
+            CezaSil.Top = 347;
+            CezaSil.Left = 416;
+
+            CezaBilgisiOgren.Visible = true;
+            CezaDüzenle.Visible = true;
+            CezaSil.Visible = true;
+
+            label1.Visible = false;
+            textBox1.Visible = false;
+            SorgulaButton.Visible = false;
+            AraButton.Visible = false;
+            CezaSilButton.Visible = false;
+            labelPlaka.Visible = false;
+            labelCezaTuru.Visible = false;
+            labelCezaMiktari.Visible = false;
+            labelCezaGirisTarihi.Visible = false;
+            labelCezaSonOdemeTarihi.Visible = false;
+
+            this.Refresh();
+        }
     }
 }

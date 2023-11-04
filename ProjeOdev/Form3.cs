@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,7 +66,7 @@ namespace ProjeOdev
             SorgulaButton.Visible = true;
 
             label1.Location = new Point(300, 250);
-            textBox1.Location = new Point(520, 250);
+            textBox1.Location = new Point(530, 250);
             SorgulaButton.Location = new Point(450, 400);
         }
 
@@ -109,7 +110,7 @@ namespace ProjeOdev
             CezaSil.Visible = false;
 
             EkleButton.Visible = true;
-            EkleButton.Location = new Point(400, 600);
+            EkleButton.Location = new Point(550, 600);
 
             Sehir.Visible = true;
             Ilce.Visible = true;
@@ -127,13 +128,13 @@ namespace ProjeOdev
             textBox7.Visible = true;
             textBox8.Visible = true;
 
-            Sehir.Location = new Point(400, 200);
-            Ilce.Location = new Point(400, 250);
-            Plaka.Location = new Point(400, 300);
-            CezaTuru.Location = new Point(400, 350);
-            CezaMiktarı.Location = new Point(400, 400);
-            CezaGirişTarihi.Location = new Point(400, 450);
-            CezaSonÖdemeTarihi.Location = new Point(400, 500);
+            Sehir.Location = new Point(525, 200);
+            Ilce.Location = new Point(540, 250);
+            Plaka.Location = new Point(523, 300);
+            CezaTuru.Location = new Point(483, 350);
+            CezaMiktarı.Location = new Point(466, 400);
+            CezaGirişTarihi.Location = new Point(438, 450);
+            CezaSonÖdemeTarihi.Location = new Point(375, 500);
 
             textBox2.Location = new Point(600, 200);
             textBox3.Location = new Point(600, 250);
@@ -141,7 +142,7 @@ namespace ProjeOdev
             textBox5.Location = new Point(600, 350);
             textBox6.Location = new Point(600, 400);
             textBox7.Location = new Point(600, 450);
-            textBox8.Location = new Point(650, 500);
+            textBox8.Location = new Point(600, 500);
         }
 
         private void EkleButton_Click(object sender, EventArgs e)
@@ -175,7 +176,7 @@ namespace ProjeOdev
             CezaSilButton.Visible = true;
 
             label1.Location = new Point(300, 250);
-            textBox1.Location = new Point(520, 250);
+            textBox1.Location = new Point(530, 250);
             CezaSilButton.Location = new Point(450, 400);
 
         }
@@ -203,7 +204,67 @@ namespace ProjeOdev
 
         private void button4_Click(object sender, EventArgs e)
         {
+            Application.Exit();
+        }
+
+        private void Form3_Paint(object sender, PaintEventArgs e)
+        {
+            using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, Color.FromArgb(255, 200, 100), Color.FromArgb(100, 200, 255), 45f))
+            {
+                e.Graphics.FillRectangle(brush, this.ClientRectangle);
+            }
+        }
+
+        private void AnaSayfaButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
             this.Close();
+        }
+
+        private void YetkiliPolisSayfasinaDon_Click(object sender, EventArgs e)
+        {
+            CezaBilgisiOgren.Top = 192;
+            CezaBilgisiOgren.Left = 173;
+
+            CezaEkle.Top = 189;
+            CezaEkle.Left = 545;
+
+            CezaSil.Top = 346;
+            CezaSil.Left = 357;
+
+            CezaBilgisiOgren.Visible = true;
+            CezaEkle.Visible = true;
+            CezaSil.Visible = true;
+
+
+            EkleButton.Visible = false;
+            label1.Visible = false;
+            textBox1.Visible = false;
+            labelPlaka.Visible = false;
+            labelCezaTuru.Visible = false;
+            labelCezaMiktari.Visible = false;
+            labelCezaGirisTarihi.Visible = false;
+            labelCezaSonOdemeTarihi.Visible = false;
+            SorgulaButton.Visible = false;
+            CezaSilButton.Visible = false;
+            Sehir.Visible = false;
+            Ilce.Visible = false;
+            Plaka.Visible = false;
+            CezaTuru.Visible = false;
+            CezaMiktarı.Visible = false;
+            CezaGirişTarihi.Visible = false;
+            CezaSonÖdemeTarihi.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            textBox6.Visible = false;
+            textBox7.Visible = false;
+            textBox8.Visible = false;
+
+            this.Refresh();
         }
     }
 }
