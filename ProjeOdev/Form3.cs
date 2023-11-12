@@ -14,40 +14,14 @@ namespace ProjeOdev
 {
     public partial class Form3 : Form
     {
-        public class CezaBilgisi
-        {
-            public string Plaka { get; set; }
-            public string CezaTuru { get; set; }
-            public decimal CezaMiktari { get; set; }
-            public DateTime CezaGirisTarihi { get; set; }
-            public DateTime CezaSonOdemeTarihi { get; set; }
-        }
-
-        List<CezaBilgisi> cezaListesi = new List<CezaBilgisi>
-        {
-
-        new CezaBilgisi
-        {
-            Plaka = "34 ABC 123",
-            CezaTuru = "Hız Sınırı İhlali",
-            CezaMiktari = 200.0m,
-            CezaGirisTarihi = DateTime.Now,
-            CezaSonOdemeTarihi = DateTime.Now.AddMonths(1)
-        },
-        new CezaBilgisi
-        {
-            Plaka = "06 XYZ 789",
-            CezaTuru = "Park Yasağı",
-            CezaMiktari = 100.0m,
-            CezaGirisTarihi = DateTime.Now.AddDays(-15),
-            CezaSonOdemeTarihi = DateTime.Now.AddMonths(2)
-        },
-    };
-
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi;
         public Form3()
         {
             InitializeComponent();
+            cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
         }
+
+        //List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
 
         private void Form3_Load(object sender, EventArgs e)
         {
@@ -86,7 +60,7 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Location = new Point(400, 500);
 
             string plakaNumarasi = textBox1.Text;
-            CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
@@ -147,16 +121,14 @@ namespace ProjeOdev
 
         private void EkleButton_Click(object sender, EventArgs e)
         {
-            CezaBilgisi yeniCeza = new CezaBilgisi
-            {
-                Plaka = textBox4.Text,
-                CezaTuru = textBox5.Text,
-                CezaMiktari = Convert.ToDecimal(textBox6.Text),
-                CezaGirisTarihi = DateTime.Parse(textBox7.Text),
-                CezaSonOdemeTarihi = DateTime.Parse(textBox8.Text)
+           TrafikCezaSistemi.CezaBilgisi yeniCeza = new TrafikCezaSistemi.CezaBilgisi(
+                textBox4.Text,
+                textBox5.Text,
+                Convert.ToDecimal(textBox6.Text),
+                DateTime.Parse(textBox7.Text),
+                DateTime.Parse(textBox8.Text)
+            );
 
-                //CezaGirisTarihi.ToString("dd/MM/yyyy" textBox7.Text);
-            };
 
             cezaListesi.Add(yeniCeza);
             MessageBox.Show("Ceza eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -184,7 +156,7 @@ namespace ProjeOdev
         private void CezaSilButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
 
             if (cezaBilgisi != null)
             {

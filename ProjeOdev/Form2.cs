@@ -13,41 +13,12 @@ namespace ProjeOdev
 {
     public partial class Form2 : Form
     {
-        public class CezaBilgisi
-        {
-            public string Plaka { get; set; }
-            public string CezaTuru { get; set; }
-            public decimal CezaMiktari { get; set; }
-            public DateTime CezaGirisTarihi { get; set; }
-            public DateTime CezaSonOdemeTarihi { get; set; } 
-        }
-
-        List<CezaBilgisi> cezaListesi = new List<CezaBilgisi>
-        {
-
-        new CezaBilgisi
-        {
-            Plaka = "34 ABC 123",
-            CezaTuru = "Hız Sınırı İhlali",
-            CezaMiktari = 200.0m,
-            CezaGirisTarihi = DateTime.Now,
-            CezaSonOdemeTarihi = DateTime.Now.AddMonths(1)
-        },
-        new CezaBilgisi
-        {
-            Plaka = "06 XYZ 789",
-            CezaTuru = "Park Yasağı",
-            CezaMiktari = 100.0m,
-            CezaGirisTarihi = DateTime.Now.AddDays(-15),
-            CezaSonOdemeTarihi = DateTime.Now.AddMonths(2)
-        },
-    };
-
-
         public Form2()
         {
             InitializeComponent();
         }
+
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -86,7 +57,7 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Location = new Point(400, 500);
 
             string plakaNumarasi = textBox1.Text;
-            CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
@@ -124,7 +95,7 @@ namespace ProjeOdev
         private void AraButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            CezaBilgisi ceza = cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi ceza = cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
 
             if (ceza != null)
             {
@@ -177,7 +148,7 @@ namespace ProjeOdev
         private void CezaSilButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            CezaBilgisi ceza = cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi ceza = cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
 
             if (ceza != null)
             {
