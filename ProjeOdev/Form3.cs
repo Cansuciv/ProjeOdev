@@ -121,13 +121,13 @@ namespace ProjeOdev
 
         private void EkleButton_Click(object sender, EventArgs e)
         {
-           TrafikCezaSistemi.CezaBilgisi yeniCeza = new TrafikCezaSistemi.CezaBilgisi(
-                textBox4.Text,
-                textBox5.Text,
-                Convert.ToDecimal(textBox6.Text),
-                DateTime.Parse(textBox7.Text),
-                DateTime.Parse(textBox8.Text)
-            );
+            TrafikCezaSistemi.CezaBilgisi yeniCeza = new TrafikCezaSistemi.CezaBilgisi(
+                 textBox4.Text,
+                 textBox5.Text,
+                 Convert.ToDecimal(textBox6.Text),
+                 DateTime.Parse(textBox7.Text),
+                 DateTime.Parse(textBox8.Text)
+             );
 
 
             cezaListesi.Add(yeniCeza);

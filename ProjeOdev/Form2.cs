@@ -187,10 +187,10 @@ namespace ProjeOdev
 
         private void AnaSayfaButton_Click(object sender, EventArgs e)
         {
-            this.Hide(); 
+            this.Hide();
             Form1 form1 = new Form1();
-            form1.ShowDialog(); 
-            this.Close(); 
+            form1.ShowDialog();
+            this.Close();
         }
 
         private void AdminSayfasinaDon_Click(object sender, EventArgs e)

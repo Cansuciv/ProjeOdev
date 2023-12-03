@@ -1,4 +1,6 @@
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
 
 namespace ProjeOdev
 {
@@ -15,9 +17,6 @@ namespace ProjeOdev
 
         private void Admin_Giriþi_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.AdminGiris x = new TrafikCezaSistemi.AdminGiris();
-            x.KullaniciAdi = textBox1.Text;
-            x.Sifre=textBox2.Text;  
 
             Admin_Giriþi.Top = 20;
             Admin_Giriþi.Left = 450;
@@ -42,17 +41,20 @@ namespace ProjeOdev
 
         private void AdminGirisiYapButonu_Click(object sender, EventArgs e)
         {
-            Form2 AdminGiris = new Form2();
-            AdminGiris.Show();
+            TrafikCezaSistemi.AdminGiris x = new TrafikCezaSistemi.AdminGiris(textBox1.Text, textBox2.Text);
+
+            if (x.KontrolGiris(textBox1.Text, textBox2.Text))
+            {
+                Form2 AdminGiris = new Form2();
+                AdminGiris.Show();
+            }
+            else
+                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
 
         }
 
         private void Yetkili_polis_giriþi_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.YetkiliPolisGiriþi x = new TrafikCezaSistemi.YetkiliPolisGiriþi();
-            x.YPKullaniciAdi = textBox1.Text;
-            x.YPSifre = textBox2.Text;
-
             Yetkili_polis_giriþi.Top = 20;
             Yetkili_polis_giriþi.Left = 480;
 
@@ -70,22 +72,24 @@ namespace ProjeOdev
             textBox1.Location = new Point(580, 250);
             textBox2.Location = new Point(580, 350);
             YetkiliPolisGirisiYap.Location = new Point(580, 450);
-
         }
 
         private void YetkiliPolisGirisiYap_Click(object sender, EventArgs e)
         {
-            Form3 PolisGiris = new Form3();
-            PolisGiris.Show();
+            TrafikCezaSistemi.YetkiliPolisGiriþi x = new TrafikCezaSistemi.YetkiliPolisGiriþi(textBox1.Text, textBox2.Text);
+
+            if (x.YetkiliGirisKontrol(textBox1.Text, textBox2.Text))
+            {
+                Form3 PolisGiris = new Form3();
+                PolisGiris.Show();
+            }
+            else
+                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
 
         private void Kullanýcý_giriþi_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciGiris x = new TrafikCezaSistemi.KullaniciGiris();
-            x.KKullaniciAdi = textBox1.Text;
-            x.KSifre = textBox2.Text;
-
             Kullanýcý_giriþi.Top = 20;
             Kullanýcý_giriþi.Left = 480;
 
@@ -109,16 +113,19 @@ namespace ProjeOdev
 
         private void GirisYapButton_Click(object sender, EventArgs e)
         {
-            Form4 KullaniciGirisEkrani = new Form4();
-            KullaniciGirisEkrani.Show();
+            TrafikCezaSistemi.KullaniciGiris x = new TrafikCezaSistemi.KullaniciGiris(textBox1.Text, textBox2.Text);
+            if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
+            {
+                Form4 KullaniciGirisEkrani = new Form4();
+                KullaniciGirisEkrani.Show();
+            }
+            else
+                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
         private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciUye x = new TrafikCezaSistemi.KullaniciUye();
-            x.KKullaniciAdi = textBox1.Text;
-            x.KSifre = textBox2.Text;   
-            x.KUTelefonNo=int.Parse(textBox3.Text);
+            
 
             GirisYapButton.Visible = false;
 
@@ -145,8 +152,18 @@ namespace ProjeOdev
 
         private void UyeOl_Click(object sender, EventArgs e)
         {
-            Form4 KullaniciGirisEkrani = new Form4();
-            KullaniciGirisEkrani.Show();
+            TrafikCezaSistemi.KullaniciUye x = new TrafikCezaSistemi.KullaniciUye(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox3.Text));
+            //if (int.TryParse(textBox3.Text, out int telno))
+            //    x.KUTelefonNo = telno;
+            if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
+            {
+                Form4 KullaniciGirisEkrani = new Form4();
+                KullaniciGirisEkrani.Show();
+            }
+            else
+                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
+
+       
         }
 
         private void button4_Click(object sender, EventArgs e)
