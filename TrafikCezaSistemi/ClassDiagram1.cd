@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TrafikCezaSistemi.AdminGiris">
+    <Position X="15.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>AdminGiris.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafikCezaSistemi.CezaBilgisi">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAACAAAABAEAAACAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CezaBilgisi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafikCezaSistemi.KullaniciGiris">
+    <Position X="14" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>KullaniciGiris.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafikCezaSistemi.KullaniciUye">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>KullaniciUye.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TrafikCezaSistemi.YetkiliPolisGirişi">
+    <Position X="18.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAQAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>YetkiliPolisGirişi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
