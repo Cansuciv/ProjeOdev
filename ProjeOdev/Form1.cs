@@ -15,6 +15,10 @@ namespace ProjeOdev
 
         private void Admin_Giriþi_Click(object sender, EventArgs e)
         {
+            TrafikCezaSistemi.AdminGiris x = new TrafikCezaSistemi.AdminGiris();
+            x.KullaniciAdi = textBox1.Text;
+            x.Sifre=textBox2.Text;  
+
             Admin_Giriþi.Top = 20;
             Admin_Giriþi.Left = 450;
 
@@ -32,6 +36,7 @@ namespace ProjeOdev
             textBox1.Location = new Point(580, 250);
             textBox2.Location = new Point(580, 350);
             AdminGirisiYapButonu.Location = new Point(580, 450);
+
         }
 
 
@@ -44,6 +49,10 @@ namespace ProjeOdev
 
         private void Yetkili_polis_giriþi_Click(object sender, EventArgs e)
         {
+            TrafikCezaSistemi.YetkiliPolisGiriþi x = new TrafikCezaSistemi.YetkiliPolisGiriþi();
+            x.YPKullaniciAdi = textBox1.Text;
+            x.YPSifre = textBox2.Text;
+
             Yetkili_polis_giriþi.Top = 20;
             Yetkili_polis_giriþi.Left = 480;
 
@@ -73,6 +82,10 @@ namespace ProjeOdev
 
         private void Kullanýcý_giriþi_Click(object sender, EventArgs e)
         {
+            TrafikCezaSistemi.KullaniciGiris x = new TrafikCezaSistemi.KullaniciGiris();
+            x.KKullaniciAdi = textBox1.Text;
+            x.KSifre = textBox2.Text;
+
             Kullanýcý_giriþi.Top = 20;
             Kullanýcý_giriþi.Left = 480;
 
@@ -102,6 +115,11 @@ namespace ProjeOdev
 
         private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
         {
+            TrafikCezaSistemi.KullaniciUye x = new TrafikCezaSistemi.KullaniciUye();
+            x.KKullaniciAdi = textBox1.Text;
+            x.KSifre = textBox2.Text;   
+            x.KUTelefonNo=int.Parse(textBox3.Text);
+
             GirisYapButton.Visible = false;
 
             label1.Visible = true;

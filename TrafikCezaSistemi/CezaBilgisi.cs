@@ -9,7 +9,7 @@ namespace TrafikCezaSistemi
         public string CezaTuru { get; set; }
         public decimal CezaMiktari { get; set; }
         public DateTime CezaGirisTarihi { get; set; }
-        public DateTime CezaSonOdemeTarihi { get; set; }
+        public DateTime CezaSonOdemeTarihi { get; set; }    
 
         public CezaBilgisi(string plaka, string cezaTuru, decimal cezaMiktari, DateTime cezaGirisTarihi, DateTime cezaSonOdemeTarihi)
         {
@@ -22,7 +22,6 @@ namespace TrafikCezaSistemi
 
         public static List<CezaBilgisi> CezaListesiOlustur()
         {
-            // Use the constructor with parameters when creating instances
             return new List<CezaBilgisi>
             {
                 new CezaBilgisi("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1)),
