@@ -113,14 +113,19 @@ namespace ProjeOdev
 
         private void GirisYapButton_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciGiris x = new TrafikCezaSistemi.KullaniciGiris(textBox1.Text, textBox2.Text);
-            if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
-            {
-                Form4 KullaniciGirisEkrani = new Form4();
-                KullaniciGirisEkrani.Show();
-            }
-            else
-                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
+            TrafikCezaSistemi.KullaniciGiris x = new TrafikCezaSistemi.KullaniciGiris();
+            x.KKullaniciAdi = textBox1.Text;
+            x.KSifre = textBox2.Text;
+            Form4 KullaniciGirisEkrani = new Form4();
+            KullaniciGirisEkrani.Show();
+
+            //if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
+            //{
+            //    Form4 KullaniciGirisEkrani = new Form4();
+            //    KullaniciGirisEkrani.Show();
+            //}
+            //else
+            //    MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
         private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
@@ -152,18 +157,21 @@ namespace ProjeOdev
 
         private void UyeOl_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciUye x = new TrafikCezaSistemi.KullaniciUye(textBox1.Text, textBox2.Text, Convert.ToInt32(textBox3.Text));
-            //if (int.TryParse(textBox3.Text, out int telno))
-            //    x.KUTelefonNo = telno;
-            if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
-            {
-                Form4 KullaniciGirisEkrani = new Form4();
-                KullaniciGirisEkrani.Show();
-            }
-            else
-                MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
+            TrafikCezaSistemi.KullaniciUye x = new TrafikCezaSistemi.KullaniciUye();
+            x.KKullaniciAdi = textBox1.Text;
+            x.KSifre = textBox2.Text;
+            x.kullaniciTelefonNo = textBox3.Text;
+            
+            Form4 KullaniciGirisEkrani = new Form4();
+            KullaniciGirisEkrani.Show();
 
-       
+            //if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
+            //{
+            //    Form4 KullaniciGirisEkrani = new Form4();
+            //    KullaniciGirisEkrani.Show();
+            //}
+            //else
+            //    MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
         private void button4_Click(object sender, EventArgs e)

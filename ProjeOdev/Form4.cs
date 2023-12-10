@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjeOdev
 {
@@ -18,7 +19,7 @@ namespace ProjeOdev
             InitializeComponent();
         }
 
-        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
 
         private void Form4_Load(object sender, EventArgs e)
         {
@@ -34,7 +35,7 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Visible = true;
 
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.KullaniciYetki cezaBilgisi = (TrafikCezaSistemi.KullaniciYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
@@ -45,7 +46,8 @@ namespace ProjeOdev
             }
             else
             {
-                MessageBox.Show("Plakaya ait bilgi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -86,7 +88,20 @@ namespace ProjeOdev
 
         private void Ode_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ödeme yapılmıştır.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki(
+            textBox4.Text,
+            textBox5.Text,
+            Convert.ToDecimal(textBox1.Text),
+            DateTime.Parse(textBox2.Text),
+            DateTime.Parse(textBox3.Text));
+
+            x.KartNumarası = int.Parse(textBox2.Text);
+            x.Skt = int.Parse(textBox3.Text);
+            x.cvv = int.Parse(textBox4.Text);
+            x.Tutar = float.Parse(textBox5.Text);
+
+            MessageBox.Show("Ödemeniz yapılmıştır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MessageBox.Show(x.OdemeMesaj(), "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -8,40 +8,47 @@ namespace TrafikCezaSistemi
 {
     public class KullaniciUye : KullaniciGiris
     {
-        private int kullaniciTelefonNo;
+        public string? kullaniciTelefonNo;
 
-        public KullaniciUye(string kullaniciAdi, string sifre, int kullaniciTelefonNo) : base(kullaniciAdi, sifre)
-        {
-            if (GecerliTelefonNo(kullaniciTelefonNo))
-            {
-                KullaniciTelefonNo = kullaniciTelefonNo;
-            }
-            else
-            {
-                throw new ArgumentException("Telefon numarası 10 rakamdan oluşmalıdır.");
-            }
-        }
+        //public override string kullaniciTelefonNo()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public int KullaniciTelefonNo
-        {
-            get { return kullaniciTelefonNo; }
-            set
-            {
-                if (GecerliTelefonNo(value))
-                {
-                    kullaniciTelefonNo = value;
-                }
-                else
-                {
-                    throw new ArgumentException("Telefon numarası 10 rakamdan oluşmalıdır.");
-                }
-            }
-        }
+        //public KullaniciUye(string kullaniciAdi, string sifre, string kullaniciTelefonNo) : base(kullaniciAdi, sifre)
+        //{
+        //    //if (GecerliTelefonNo(kullaniciTelefonNo))
+        //    //{
+        //    //    KullaniciTelefonNo = kullaniciTelefonNo;
+        //    //}
+        //    //else
+        //    //{
+        //    //    throw new ArgumentException("Telefon numarası 10 rakamdan oluşmalıdır.");
+        //    //}
+        //}
 
-        private bool GecerliTelefonNo(int telefonNo)
-        {
-            string telefonNoStr = telefonNo.ToString();
-            return telefonNoStr.Length == 10;
-        }
+        
+
+        //public string KullaniciTelefonNo
+        //{
+        //    get { return kullaniciTelefonNo; }
+        //    set
+        //    {
+        //        if (GecerliTelefonNo(value))
+        //        {
+        //            kullaniciTelefonNo = value;
+        //        }
+        //        else
+        //        {
+        //            throw new ArgumentException("Telefon numarası 10 rakamdan oluşmalıdır.");
+        //        }
+        //    }
+        //}
+
+        //private static bool GecerliTelefonNo(string telefonNo)
+        //{
+        //    string telefonNoStr = telefonNo;
+        //    //return telefonNoStr.Length == 10;
+        //}
     }
 }

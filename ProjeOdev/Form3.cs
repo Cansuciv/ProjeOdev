@@ -14,19 +14,17 @@ namespace ProjeOdev
 {
     public partial class Form3 : Form
     {
-        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi;
         public Form3()
         {
             InitializeComponent();
-            cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
         }
-
-        //List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
 
         private void Form3_Load(object sender, EventArgs e)
         {
 
         }
+
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
 
         private void CezaBilgisiOgren_Click(object sender, EventArgs e)
         {
@@ -60,7 +58,7 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Location = new Point(400, 500);
 
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.PolisYetki cezaBilgisi = (TrafikCezaSistemi.PolisYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
@@ -71,7 +69,8 @@ namespace ProjeOdev
             }
             else
             {
-                MessageBox.Show("Plakaya ait bilgi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -121,7 +120,7 @@ namespace ProjeOdev
 
         private void EkleButton_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.CezaBilgisi yeniCeza = new TrafikCezaSistemi.CezaBilgisi(
+            TrafikCezaSistemi.PolisYetki yeniCeza = new TrafikCezaSistemi.PolisYetki(
                  textBox4.Text,
                  textBox5.Text,
                  Convert.ToDecimal(textBox6.Text),
@@ -131,7 +130,8 @@ namespace ProjeOdev
 
 
             cezaListesi.Add(yeniCeza);
-            MessageBox.Show("Ceza eklenmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Yeni ceza eklenmiştir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //MessageBox.Show(yeniCeza.CezaEkleMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -156,20 +156,22 @@ namespace ProjeOdev
         private void CezaSilButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.PolisYetki cezaBilgisi = (TrafikCezaSistemi.PolisYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
 
             if (cezaBilgisi != null)
             {
                 // Cezayı listeden kaldırın
                 cezaListesi.Remove(cezaBilgisi);
-                MessageBox.Show("Seçilen ceza silinmiştir.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ceza başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(cezaBilgisi.CezaSilmeMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Kullanıcının girdiği plaka numarasını temizleyin
                 textBox1.Text = "";
             }
             else
             {
-                MessageBox.Show("Plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
