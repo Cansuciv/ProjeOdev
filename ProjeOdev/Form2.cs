@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace ProjeOdev
 {
     public partial class Form2 : Form
@@ -21,8 +22,7 @@ namespace ProjeOdev
         }
 
 
-        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
-        
+        private List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
 
 
         private void Form2_Load(object sender, EventArgs e)
@@ -62,7 +62,9 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Location = new Point(400, 500);
 
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.AdminYetki cezaBilgisi = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi =cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            //TrafikCezaSistemi.AdminYetki cezaBilgisi = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;

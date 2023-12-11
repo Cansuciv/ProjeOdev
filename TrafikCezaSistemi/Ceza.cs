@@ -9,8 +9,8 @@ namespace TrafikCezaSistemi
     public abstract class Ceza
     {
 
-        public string Plaka { get; set; }
-        public string CezaTuru { get; set; }
+        public string? Plaka { get; set; }
+        public string? CezaTuru { get; set; }
         public decimal CezaMiktari { get; set; }
         public DateTime CezaGirisTarihi { get; set; }
         public DateTime CezaSonOdemeTarihi { get; set; }
