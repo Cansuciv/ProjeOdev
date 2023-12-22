@@ -87,7 +87,7 @@
             // 
             OdemeYapButton.BackColor = Color.FromArgb(192, 192, 255);
             OdemeYapButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            OdemeYapButton.Location = new Point(387, 624);
+            OdemeYapButton.Location = new Point(448, 642);
             OdemeYapButton.Name = "OdemeYapButton";
             OdemeYapButton.Size = new Size(169, 65);
             OdemeYapButton.TabIndex = 71;
@@ -110,7 +110,7 @@
             // labelCezaSonOdemeTarihi
             // 
             labelCezaSonOdemeTarihi.AutoSize = true;
-            labelCezaSonOdemeTarihi.BackColor = Color.Turquoise;
+            labelCezaSonOdemeTarihi.BackColor = Color.Wheat;
             labelCezaSonOdemeTarihi.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             labelCezaSonOdemeTarihi.Location = new Point(416, 552);
             labelCezaSonOdemeTarihi.Name = "labelCezaSonOdemeTarihi";
@@ -122,7 +122,7 @@
             // labelCezaGirisTarihi
             // 
             labelCezaGirisTarihi.AutoSize = true;
-            labelCezaGirisTarihi.BackColor = Color.Turquoise;
+            labelCezaGirisTarihi.BackColor = Color.Wheat;
             labelCezaGirisTarihi.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             labelCezaGirisTarihi.Location = new Point(416, 505);
             labelCezaGirisTarihi.Name = "labelCezaGirisTarihi";
@@ -134,7 +134,7 @@
             // labelCezaMiktari
             // 
             labelCezaMiktari.AutoSize = true;
-            labelCezaMiktari.BackColor = Color.Turquoise;
+            labelCezaMiktari.BackColor = Color.Wheat;
             labelCezaMiktari.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             labelCezaMiktari.Location = new Point(416, 459);
             labelCezaMiktari.Name = "labelCezaMiktari";
@@ -146,7 +146,7 @@
             // labelCezaTuru
             // 
             labelCezaTuru.AutoSize = true;
-            labelCezaTuru.BackColor = Color.Turquoise;
+            labelCezaTuru.BackColor = Color.Wheat;
             labelCezaTuru.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             labelCezaTuru.Location = new Point(416, 418);
             labelCezaTuru.Name = "labelCezaTuru";
@@ -158,7 +158,7 @@
             // labelPlaka
             // 
             labelPlaka.AutoSize = true;
-            labelPlaka.BackColor = Color.Turquoise;
+            labelPlaka.BackColor = Color.Wheat;
             labelPlaka.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             labelPlaka.Location = new Point(416, 369);
             labelPlaka.Name = "labelPlaka";
@@ -308,7 +308,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1022, 715);
+            ClientSize = new Size(1035, 732);
             Controls.Add(CezaBilgisiOgrenSayfasinaDon);
             Controls.Add(AnaSayfaButton);
             Controls.Add(Ode);

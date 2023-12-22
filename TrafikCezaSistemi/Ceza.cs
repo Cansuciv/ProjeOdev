@@ -14,7 +14,8 @@ namespace TrafikCezaSistemi
         public decimal CezaMiktari { get; set; }
         public DateTime CezaGirisTarihi { get; set; }
         public DateTime CezaSonOdemeTarihi { get; set; }
-        public abstract List<Ceza> CezaListesiOlustur();
+        //public abstract List<Ceza> CezaListesiOlustur();
+        public abstract string AnaBilgiMesaji();
 
     }
 }

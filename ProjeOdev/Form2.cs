@@ -22,12 +22,11 @@ namespace ProjeOdev
         }
 
 
-        private List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
+        //private List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
 
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-        }
+        TrafikCezaSistemi.AdminYetki x = new TrafikCezaSistemi.AdminYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
+       
 
         private void CezaBilgisiOgren_Click(object sender, EventArgs e)
         {
@@ -63,18 +62,24 @@ namespace ProjeOdev
 
             string plakaNumarasi = textBox1.Text;
 
-            TrafikCezaSistemi.CezaBilgisi cezaBilgisi =cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             //TrafikCezaSistemi.AdminYetki cezaBilgisi = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
+                var mesaj = x.AnaBilgiMesaji();
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
                 labelCezaTuru.Text = "Ceza Türü: " + cezaBilgisi.CezaTuru;
                 labelCezaMiktari.Text = "Ceza Miktarı: " + cezaBilgisi.CezaMiktari.ToString("C"); // Para birimi formatı
                 labelCezaGirisTarihi.Text = "Ceza Giriş Tarihi: " + cezaBilgisi.CezaGirisTarihi.ToString("dd/MM/yyyy");
-                labelCezaSonOdemeTarihi.Text = "Son Ödeme Tarihi: " + cezaBilgisi.CezaSonOdemeTarihi.ToString("dd/MM/yyyy");
+                labelCezaSonOdemeTarihi.Text = "Son Ödeme Tarihi: "+ cezaBilgisi.CezaSonOdemeTarihi.ToString("dd/MM/yyyy") + "\n" + mesaj;
             }
             else
             {
+                labelPlaka.Visible = false;
+                labelCezaTuru.Visible = false;
+                labelCezaMiktari.Visible = false;
+                labelCezaGirisTarihi.Visible = false;
+                labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Plakaya ait bilgi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj());
             }
@@ -103,7 +108,7 @@ namespace ProjeOdev
         private void AraButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.AdminYetki ceza = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi ceza = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
 
             if (ceza != null)
             {
@@ -113,18 +118,18 @@ namespace ProjeOdev
                 labelCezaGirisTarihi.Text = ceza.CezaGirisTarihi.ToShortDateString();
                 labelCezaSonOdemeTarihi.Text = ceza.CezaSonOdemeTarihi.ToShortDateString();
 
-
+                
                 // Kullanıcıdan yeni bilgileri alın
-                ceza.yeniCezaTuru = "Yeni Ceza Türü"; // Yeni ceza türünü kullanıcıdan alın
-                ceza.yeniCezaMiktari = 300.0m; // Yeni ceza miktarını kullanıcıdan alın
-                ceza.yeniCezaGirisTarihi = DateTime.Now; // Yeni ceza giriş tarihini kullanıcıdan alın
-                ceza.yeniCezaSonOdemeTarihi = DateTime.Now.AddMonths(3); // Yeni ceza son ödeme tarihini kullanıcıdan alın
+                x.yeniCezaTuru = "Yeni Ceza Türü"; // Yeni ceza türünü kullanıcıdan alın
+                x.yeniCezaMiktari = 300.0m; // Yeni ceza miktarını kullanıcıdan alın
+                x.yeniCezaGirisTarihi = DateTime.Now; // Yeni ceza giriş tarihini kullanıcıdan alın
+                x.yeniCezaSonOdemeTarihi = DateTime.Now.AddMonths(3); // Yeni ceza son ödeme tarihini kullanıcıdan alın
 
                 // Yeni bilgileri güncelleyin
-                ceza.CezaTuru = ceza.yeniCezaTuru;
-                ceza.CezaMiktari = ceza.yeniCezaMiktari;
-                ceza.CezaGirisTarihi = ceza.yeniCezaGirisTarihi;
-                ceza.CezaSonOdemeTarihi = ceza.yeniCezaSonOdemeTarihi;
+                x.CezaTuru = x.yeniCezaTuru;
+                x.CezaMiktari = x.yeniCezaMiktari;
+                x.CezaGirisTarihi = x.yeniCezaGirisTarihi;
+                x.CezaSonOdemeTarihi = x.yeniCezaSonOdemeTarihi;
 
                 // Kullanıcıya güncelleme başarılı mesajını gösterin
                 MessageBox.Show("Ceza bilgileri başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -159,8 +164,7 @@ namespace ProjeOdev
         private void CezaSilButton_Click(object sender, EventArgs e)
         {
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.AdminYetki ceza = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(c => c.Plaka == plakaNumarasi);
-
+            TrafikCezaSistemi.CezaBilgisi ceza = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (ceza != null)
             {
                 // Eğer ceza bulunduysa, listeden kaldırın

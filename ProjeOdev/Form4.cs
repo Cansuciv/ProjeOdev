@@ -19,7 +19,8 @@ namespace ProjeOdev
             InitializeComponent();
         }
 
-        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
+        List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
+        TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
 
         private void Form4_Load(object sender, EventArgs e)
         {
@@ -35,17 +36,23 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Visible = true;
 
             string plakaNumarasi = textBox1.Text;
-            TrafikCezaSistemi.KullaniciYetki cezaBilgisi = (TrafikCezaSistemi.KullaniciYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
+            TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
+                var mesaj = x.AnaBilgiMesaji();
                 labelPlaka.Text = "Plaka: " + cezaBilgisi.Plaka;
                 labelCezaTuru.Text = "Ceza Türü: " + cezaBilgisi.CezaTuru;
                 labelCezaMiktari.Text = "Ceza Miktarı: " + cezaBilgisi.CezaMiktari.ToString("C"); // Para birimi formatı
                 labelCezaGirisTarihi.Text = "Ceza Giriş Tarihi: " + cezaBilgisi.CezaGirisTarihi.ToString("dd/MM/yyyy");
-                labelCezaSonOdemeTarihi.Text = "Son Ödeme Tarihi: " + cezaBilgisi.CezaSonOdemeTarihi.ToString("dd/MM/yyyy");
+                labelCezaSonOdemeTarihi.Text = "Son Ödeme Tarihi: " + cezaBilgisi.CezaSonOdemeTarihi.ToString("dd/MM/yyyy") + "\n" + mesaj;
             }
             else
             {
+                labelPlaka.Visible = false;
+                labelCezaTuru.Visible = false;
+                labelCezaMiktari.Visible = false;
+                labelCezaGirisTarihi.Visible = false;
+                labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -88,12 +95,7 @@ namespace ProjeOdev
 
         private void Ode_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki(
-            textBox4.Text,
-            textBox5.Text,
-            Convert.ToDecimal(textBox1.Text),
-            DateTime.Parse(textBox2.Text),
-            DateTime.Parse(textBox3.Text));
+            TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
 
             x.KartNumarası = int.Parse(textBox2.Text);
             x.Skt = int.Parse(textBox3.Text);
@@ -151,7 +153,7 @@ namespace ProjeOdev
             label1.Location = new Point(136, 153);
             label2.Location = new Point(267, 242);
             textBox1.Location = new Point(493, 240);
-            OdemeYapButton.Location = new Point(387, 624);
+            OdemeYapButton.Location = new Point(450, 640);
             button1.Location = new Point(877, 633);
 
         }
