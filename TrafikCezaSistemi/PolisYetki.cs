@@ -11,6 +11,11 @@ namespace TrafikCezaSistemi
         public PolisYetki(string plaka, string cezaTuru, decimal cezaMiktari, DateTime cezaGirisTarihi, DateTime cezaSonOdemeTarihi)
         : base(plaka, cezaTuru, cezaMiktari, cezaGirisTarihi, cezaSonOdemeTarihi)
         {
-        }   
+        }
+
+        public override string AnaBilgiMesaji()
+        {
+            return "Ceza Bilgileri";
+        }
     }
 }

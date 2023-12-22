@@ -21,7 +21,7 @@ namespace ProjeOdev
 
         List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
         TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
-
+        
         private void Form4_Load(object sender, EventArgs e)
         {
 
@@ -54,7 +54,6 @@ namespace ProjeOdev
                 labelCezaGirisTarihi.Visible = false;
                 labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -74,6 +73,7 @@ namespace ProjeOdev
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
+            label7.Visible = true;
 
             textBox1.Visible = false;
             textBox2.Visible = true;
@@ -85,25 +85,26 @@ namespace ProjeOdev
             label4.Location = new Point(273, 350);
             label5.Location = new Point(455, 400);
             label6.Location = new Point(445, 450);
+            label7.Location = new Point(300, 230);
 
             textBox2.Location = new Point(540, 300);
             textBox3.Location = new Point(540, 350);
             textBox4.Location = new Point(540, 400);
             textBox5.Location = new Point(540, 450);
             Ode.Location = new Point(500, 600);
+
+            TrafikCezaSistemi.IOdemeBilgileri bilgi = (TrafikCezaSistemi.IOdemeBilgileri)x;
+            label7.Text = bilgi.OdemeMesaj();
+
         }
 
         private void Ode_Click(object sender, EventArgs e)
         {
-            TrafikCezaSistemi.KullaniciYetki x = new TrafikCezaSistemi.KullaniciYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
-
             x.KartNumarası = int.Parse(textBox2.Text);
             x.Skt = int.Parse(textBox3.Text);
             x.cvv = int.Parse(textBox4.Text);
             x.Tutar = float.Parse(textBox5.Text);
-
             MessageBox.Show("Ödemeniz yapılmıştır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //MessageBox.Show(x.OdemeMesaj(), "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -136,6 +137,7 @@ namespace ProjeOdev
             label4.Visible = false;
             label5.Visible = false;
             label6.Visible = false;
+            label7.Visible = false;
             textBox2.Visible = false;
             textBox3.Visible = false;
             textBox4.Visible = false;

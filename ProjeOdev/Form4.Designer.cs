@@ -50,6 +50,7 @@
             Ode = new Button();
             AnaSayfaButton = new Button();
             CezaBilgisiOgrenSayfasinaDon = new Button();
+            label7 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -57,7 +58,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.DarkSalmon;
             label1.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(136, 153);
+            label1.Location = new Point(204, 111);
             label1.Name = "label1";
             label1.Size = new Size(760, 46);
             label1.TabIndex = 0;
@@ -67,7 +68,7 @@
             // 
             textBox1.BackColor = Color.PowderBlue;
             textBox1.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(493, 240);
+            textBox1.Location = new Point(581, 180);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(235, 39);
             textBox1.TabIndex = 70;
@@ -77,7 +78,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.PowderBlue;
             label2.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(267, 242);
+            label2.Location = new Point(355, 182);
             label2.Name = "label2";
             label2.Size = new Size(220, 37);
             label2.TabIndex = 69;
@@ -112,7 +113,7 @@
             labelCezaSonOdemeTarihi.AutoSize = true;
             labelCezaSonOdemeTarihi.BackColor = Color.Wheat;
             labelCezaSonOdemeTarihi.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaSonOdemeTarihi.Location = new Point(416, 552);
+            labelCezaSonOdemeTarihi.Location = new Point(403, 536);
             labelCezaSonOdemeTarihi.Name = "labelCezaSonOdemeTarihi";
             labelCezaSonOdemeTarihi.Size = new Size(90, 37);
             labelCezaSonOdemeTarihi.TabIndex = 78;
@@ -124,7 +125,7 @@
             labelCezaGirisTarihi.AutoSize = true;
             labelCezaGirisTarihi.BackColor = Color.Wheat;
             labelCezaGirisTarihi.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaGirisTarihi.Location = new Point(416, 505);
+            labelCezaGirisTarihi.Location = new Point(403, 489);
             labelCezaGirisTarihi.Name = "labelCezaGirisTarihi";
             labelCezaGirisTarihi.Size = new Size(90, 37);
             labelCezaGirisTarihi.TabIndex = 77;
@@ -136,7 +137,7 @@
             labelCezaMiktari.AutoSize = true;
             labelCezaMiktari.BackColor = Color.Wheat;
             labelCezaMiktari.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaMiktari.Location = new Point(416, 459);
+            labelCezaMiktari.Location = new Point(403, 443);
             labelCezaMiktari.Name = "labelCezaMiktari";
             labelCezaMiktari.Size = new Size(90, 37);
             labelCezaMiktari.TabIndex = 76;
@@ -148,7 +149,7 @@
             labelCezaTuru.AutoSize = true;
             labelCezaTuru.BackColor = Color.Wheat;
             labelCezaTuru.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            labelCezaTuru.Location = new Point(416, 418);
+            labelCezaTuru.Location = new Point(403, 402);
             labelCezaTuru.Name = "labelCezaTuru";
             labelCezaTuru.Size = new Size(90, 37);
             labelCezaTuru.TabIndex = 75;
@@ -160,7 +161,7 @@
             labelPlaka.AutoSize = true;
             labelPlaka.BackColor = Color.Wheat;
             labelPlaka.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPlaka.Location = new Point(416, 369);
+            labelPlaka.Location = new Point(403, 353);
             labelPlaka.Name = "labelPlaka";
             labelPlaka.Size = new Size(90, 37);
             labelPlaka.TabIndex = 74;
@@ -171,7 +172,7 @@
             // 
             SorgulaButton.BackColor = Color.Pink;
             SorgulaButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            SorgulaButton.Location = new Point(387, 300);
+            SorgulaButton.Location = new Point(374, 284);
             SorgulaButton.Name = "SorgulaButton";
             SorgulaButton.Size = new Size(163, 50);
             SorgulaButton.TabIndex = 73;
@@ -184,7 +185,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.LightSkyBlue;
             label3.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(581, 363);
+            label3.Location = new Point(568, 347);
             label3.Name = "label3";
             label3.Size = new Size(205, 37);
             label3.TabIndex = 79;
@@ -196,7 +197,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.LightSkyBlue;
             label4.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(523, 420);
+            label4.Location = new Point(510, 404);
             label4.Name = "label4";
             label4.Size = new Size(263, 37);
             label4.TabIndex = 80;
@@ -208,7 +209,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.LightSkyBlue;
             label5.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(705, 482);
+            label5.Location = new Point(692, 466);
             label5.Name = "label5";
             label5.Size = new Size(81, 37);
             label5.TabIndex = 81;
@@ -220,7 +221,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.LightSkyBlue;
             label6.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(695, 546);
+            label6.Location = new Point(682, 530);
             label6.Name = "label6";
             label6.Size = new Size(91, 37);
             label6.TabIndex = 82;
@@ -231,7 +232,7 @@
             // 
             textBox2.BackColor = Color.LightSkyBlue;
             textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(792, 363);
+            textBox2.Location = new Point(779, 347);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(213, 34);
             textBox2.TabIndex = 83;
@@ -241,7 +242,7 @@
             // 
             textBox3.BackColor = Color.LightSkyBlue;
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(792, 424);
+            textBox3.Location = new Point(779, 408);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(213, 34);
             textBox3.TabIndex = 84;
@@ -251,7 +252,7 @@
             // 
             textBox4.BackColor = Color.LightSkyBlue;
             textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(796, 486);
+            textBox4.Location = new Point(783, 470);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(213, 34);
             textBox4.TabIndex = 85;
@@ -261,7 +262,7 @@
             // 
             textBox5.BackColor = Color.LightSkyBlue;
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(796, 550);
+            textBox5.Location = new Point(783, 534);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(213, 34);
             textBox5.TabIndex = 86;
@@ -284,7 +285,7 @@
             // 
             AnaSayfaButton.BackColor = Color.DarkSeaGreen;
             AnaSayfaButton.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            AnaSayfaButton.Location = new Point(39, 26);
+            AnaSayfaButton.Location = new Point(35, 12);
             AnaSayfaButton.Name = "AnaSayfaButton";
             AnaSayfaButton.Size = new Size(170, 80);
             AnaSayfaButton.TabIndex = 91;
@@ -296,7 +297,7 @@
             // 
             CezaBilgisiOgrenSayfasinaDon.BackColor = Color.DarkSeaGreen;
             CezaBilgisiOgrenSayfasinaDon.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            CezaBilgisiOgrenSayfasinaDon.Location = new Point(716, 26);
+            CezaBilgisiOgrenSayfasinaDon.Location = new Point(886, 23);
             CezaBilgisiOgrenSayfasinaDon.Name = "CezaBilgisiOgrenSayfasinaDon";
             CezaBilgisiOgrenSayfasinaDon.Size = new Size(263, 85);
             CezaBilgisiOgrenSayfasinaDon.TabIndex = 92;
@@ -304,11 +305,24 @@
             CezaBilgisiOgrenSayfasinaDon.UseVisualStyleBackColor = false;
             CezaBilgisiOgrenSayfasinaDon.Click += CezaBilgisiOgrenSayfasinaDon_Click;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.LightSkyBlue;
+            label7.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(745, 284);
+            label7.Name = "label7";
+            label7.Size = new Size(90, 37);
+            label7.TabIndex = 93;
+            label7.Text = "label6";
+            label7.Visible = false;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1035, 732);
+            ClientSize = new Size(1206, 712);
+            Controls.Add(label7);
             Controls.Add(CezaBilgisiOgrenSayfasinaDon);
             Controls.Add(AnaSayfaButton);
             Controls.Add(Ode);
@@ -363,5 +377,6 @@
         private Button Ode;
         private Button AnaSayfaButton;
         private Button CezaBilgisiOgrenSayfasinaDon;
+        private Label label7;
     }
 }

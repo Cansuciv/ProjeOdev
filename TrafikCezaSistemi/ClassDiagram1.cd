@@ -10,7 +10,7 @@
   <Class Name="TrafikCezaSistemi.CezaBilgisi">
     <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CezaBilgisi.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -45,9 +45,10 @@
   <Class Name="TrafikCezaSistemi.KullaniciYetki">
     <Position X="3.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAg=</HashCode>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAACAAAAAg=</HashCode>
       <FileName>KullaniciYetki.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="TrafikCezaSistemi.PolisYetki">
     <Position X="8" Y="4.75" Width="1.5" />
@@ -59,9 +60,16 @@
   <Class Name="TrafikCezaSistemi.Ceza">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAAAACAAAABAEAAACAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAABAgAAAAACAAAAAAEAAACAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Ceza.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Interface Name="TrafikCezaSistemi.IOdemeBilgileri">
+    <Position X="1.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAEAAACAAAAAg=</HashCode>
+      <FileName>IOdemeBilgileri.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

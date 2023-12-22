@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 
 namespace ProjeOdev
-{
+{  
     public partial class Form2 : Form
     {
         
