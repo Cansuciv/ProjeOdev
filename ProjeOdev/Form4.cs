@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjeOdev
-{
+{ 
     public partial class Form4 : Form
     {
         public Form4()
@@ -99,7 +99,7 @@ namespace ProjeOdev
         }
 
         private void Ode_Click(object sender, EventArgs e)
-        {
+        { 
             x.KartNumarası = int.Parse(textBox2.Text);
             x.Skt = int.Parse(textBox3.Text);
             x.cvv = int.Parse(textBox4.Text);
