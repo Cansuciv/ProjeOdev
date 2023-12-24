@@ -15,7 +15,7 @@ namespace TrafikCezaSistemi
 
         public override string AnaBilgiMesaji()
         {
-            return "Ceza Bilgileri";
+            return "Ceza Bilgileri Yetkili Polis Tarafından Görüntüleniyor.";
         }
     }
 }
