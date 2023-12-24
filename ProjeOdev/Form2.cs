@@ -21,13 +21,9 @@ namespace ProjeOdev
             InitializeComponent();
         }
 
-
-        //private List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = new List<TrafikCezaSistemi.CezaBilgisi>();
         List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
-
         TrafikCezaSistemi.AdminYetki x = new TrafikCezaSistemi.AdminYetki("34 ABC 123", "Hız Sınırı İhlali", 200.0m, DateTime.Now, DateTime.Now.AddMonths(1));
        
-
         private void CezaBilgisiOgren_Click(object sender, EventArgs e)
         {
             CezaBilgisiOgren.Top = 20;
@@ -63,7 +59,6 @@ namespace ProjeOdev
             string plakaNumarasi = textBox1.Text;
 
             TrafikCezaSistemi.CezaBilgisi cezaBilgisi = cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
-            //TrafikCezaSistemi.AdminYetki cezaBilgisi = (TrafikCezaSistemi.AdminYetki)cezaListesi.FirstOrDefault(x => x.Plaka == plakaNumarasi);
             if (cezaBilgisi != null)
             {
                 var mesaj = x.AnaBilgiMesaji();
@@ -81,7 +76,6 @@ namespace ProjeOdev
                 labelCezaGirisTarihi.Visible = false;
                 labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Plakaya ait bilgi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj());
             }
 
         }
@@ -119,11 +113,11 @@ namespace ProjeOdev
                 labelCezaSonOdemeTarihi.Text = ceza.CezaSonOdemeTarihi.ToShortDateString();
 
                 
-                // Kullanıcıdan yeni bilgileri alın
-                x.yeniCezaTuru = "Yeni Ceza Türü"; // Yeni ceza türünü kullanıcıdan alın
-                x.yeniCezaMiktari = 300.0m; // Yeni ceza miktarını kullanıcıdan alın
-                x.yeniCezaGirisTarihi = DateTime.Now; // Yeni ceza giriş tarihini kullanıcıdan alın
-                x.yeniCezaSonOdemeTarihi = DateTime.Now.AddMonths(3); // Yeni ceza son ödeme tarihini kullanıcıdan alın
+                // Kullanıcıdan yeni bilgileri alma
+                x.yeniCezaTuru = "Yeni Ceza Türü"; 
+                x.yeniCezaMiktari = 300.0m; 
+                x.yeniCezaGirisTarihi = DateTime.Now; 
+                x.yeniCezaSonOdemeTarihi = DateTime.Now.AddMonths(3); 
 
                 // Yeni bilgileri güncelleyin
                 x.CezaTuru = x.yeniCezaTuru;
@@ -131,14 +125,11 @@ namespace ProjeOdev
                 x.CezaGirisTarihi = x.yeniCezaGirisTarihi;
                 x.CezaSonOdemeTarihi = x.yeniCezaSonOdemeTarihi;
 
-                // Kullanıcıya güncelleme başarılı mesajını gösterin
                 MessageBox.Show("Ceza bilgileri başarıyla güncellendi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //MessageBox.Show(ceza.CezaGuncellemeMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(ceza.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -169,12 +160,8 @@ namespace ProjeOdev
             {
                 // Eğer ceza bulunduysa, listeden kaldırın
                 cezaListesi.Remove(ceza);
-
-                // Kullanıcıya silme başarılı mesajını gösterin
                 MessageBox.Show("Ceza başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //MessageBox.Show(ceza.CezaSilmeMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Metin kutularını temizleyin veya gizleyin, isterseniz diğer işlemleri burada yapabilirsiniz.
                 textBox1.Text = string.Empty;
                 labelCezaTuru.Text = string.Empty;
                 labelCezaMiktari.Text = string.Empty;
@@ -184,7 +171,6 @@ namespace ProjeOdev
             else
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(ceza.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

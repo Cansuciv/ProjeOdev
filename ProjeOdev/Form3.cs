@@ -77,7 +77,6 @@ namespace ProjeOdev
                 labelCezaGirisTarihi.Visible = false;
                 labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -138,8 +137,6 @@ namespace ProjeOdev
 
             cezaListesi.Add(yeniCeza);
             MessageBox.Show("Yeni ceza eklenmiştir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //MessageBox.Show(yeniCeza.CezaEkleMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
 
         private void CezaSil_Click(object sender, EventArgs e)
@@ -170,15 +167,11 @@ namespace ProjeOdev
                 // Cezayı listeden kaldırın
                 cezaListesi.Remove(cezaBilgisi);
                 MessageBox.Show("Ceza başarıyla silindi.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //MessageBox.Show(cezaBilgisi.CezaSilmeMesaj(), "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Kullanıcının girdiği plaka numarasını temizleyin
                 textBox1.Text = "";
             }
             else
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //MessageBox.Show(cezaBilgisi.CezaBulunamadıMesaj(), "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

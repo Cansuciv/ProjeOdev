@@ -118,14 +118,6 @@ namespace ProjeOdev
             x.KSifre = textBox2.Text;
             Form4 KullaniciGirisEkrani = new Form4();
             KullaniciGirisEkrani.Show();
-
-            //if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
-            //{
-            //    Form4 KullaniciGirisEkrani = new Form4();
-            //    KullaniciGirisEkrani.Show();
-            //}
-            //else
-            //    MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
         private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
@@ -164,14 +156,6 @@ namespace ProjeOdev
             
             Form4 KullaniciGirisEkrani = new Form4();
             KullaniciGirisEkrani.Show();
-
-            //if (x.KullaniciGirisKontrol(textBox1.Text, textBox2.Text))
-            //{
-            //    Form4 KullaniciGirisEkrani = new Form4();
-            //    KullaniciGirisEkrani.Show();
-            //}
-            //else
-            //    MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
         }
 
         private void button4_Click(object sender, EventArgs e)
