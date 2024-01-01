@@ -35,9 +35,7 @@ namespace ProjeOdev
             textBox1.Location = new Point(580, 250);
             textBox2.Location = new Point(580, 350);
             AdminGirisiYapButonu.Location = new Point(580, 450);
-
         }
-
 
         private void AdminGirisiYapButonu_Click(object sender, EventArgs e)
         {
@@ -50,7 +48,6 @@ namespace ProjeOdev
             }
             else
                 MessageBox.Show("Yanlýþ kullanýcý adý veya þifre girdiniz. Lütfen tekrar deneyiniz");
-
         }
 
         private void Yetkili_polis_giriþi_Click(object sender, EventArgs e)
@@ -122,8 +119,6 @@ namespace ProjeOdev
 
         private void KullaniciÜyeOlButton_Click(object sender, EventArgs e)
         {
-            
-
             GirisYapButton.Visible = false;
 
             label1.Visible = true;

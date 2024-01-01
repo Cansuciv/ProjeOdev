@@ -38,7 +38,6 @@ namespace ProjeOdev
             label1.Location = new Point(300, 250);
             textBox1.Location = new Point(550, 250);
             SorgulaButton.Location = new Point(450, 400);
-
         }
 
         private void SorgulaButton_Click(object sender, EventArgs e)
@@ -77,7 +76,6 @@ namespace ProjeOdev
                 labelCezaSonOdemeTarihi.Visible = false;
                 MessageBox.Show("Plakaya ait bilgi bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void CezaDüzenle_Click(object sender, EventArgs e)
@@ -131,7 +129,6 @@ namespace ProjeOdev
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void CezaSil_Click(object sender, EventArgs e)
@@ -172,7 +169,6 @@ namespace ProjeOdev
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -223,8 +219,6 @@ namespace ProjeOdev
             labelCezaSonOdemeTarihi.Visible = false;
 
             this.Refresh();
-        }
-
-       
+        }       
     }
 }

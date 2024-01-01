@@ -21,7 +21,6 @@ namespace ProjeOdev
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
         }
 
         List<TrafikCezaSistemi.CezaBilgisi> cezaListesi = TrafikCezaSistemi.CezaBilgisi.CezaListesiOlustur();
@@ -134,7 +133,6 @@ namespace ProjeOdev
                  DateTime.Parse(textBox8.Text)
              );
 
-
             cezaListesi.Add(yeniCeza);
             MessageBox.Show("Yeni ceza eklenmiştir.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
@@ -154,7 +152,6 @@ namespace ProjeOdev
             label1.Location = new Point(300, 250);
             textBox1.Location = new Point(530, 250);
             CezaSilButton.Location = new Point(450, 400);
-
         }
 
         private void CezaSilButton_Click(object sender, EventArgs e)
@@ -173,7 +170,6 @@ namespace ProjeOdev
             {
                 MessageBox.Show("Belirtilen plaka numarasına ait ceza bulunamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -24,7 +24,6 @@ namespace ProjeOdev
         
         private void Form4_Load(object sender, EventArgs e)
         {
-
         }
 
         private void SorgulaButton_Click(object sender, EventArgs e)
@@ -95,7 +94,6 @@ namespace ProjeOdev
 
             TrafikCezaSistemi.IOdemeBilgileri bilgi = (TrafikCezaSistemi.IOdemeBilgileri)x;
             label7.Text = bilgi.OdemeMesaj();
-
         }
 
         private void Ode_Click(object sender, EventArgs e)
@@ -157,7 +155,6 @@ namespace ProjeOdev
             textBox1.Location = new Point(493, 240);
             OdemeYapButton.Location = new Point(450, 640);
             button1.Location = new Point(877, 633);
-
         }
     }
 }

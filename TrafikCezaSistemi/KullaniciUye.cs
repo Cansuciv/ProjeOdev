@@ -8,8 +8,8 @@ namespace TrafikCezaSistemi
 {
     public class KullaniciUye : KullaniciGiris
     {
+        #region Fields
         public string? kullaniciTelefonNo;
-
-        
+        #endregion
     }
 }

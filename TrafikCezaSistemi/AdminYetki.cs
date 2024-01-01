@@ -9,14 +9,18 @@ namespace TrafikCezaSistemi
 {
     public class AdminYetki :CezaBilgisi
     {
+        #region Methods
         public AdminYetki(string plaka, string cezaTuru, decimal cezaMiktari, DateTime cezaGirisTarihi, DateTime cezaSonOdemeTarihi)
         : base(plaka, cezaTuru, cezaMiktari, cezaGirisTarihi, cezaSonOdemeTarihi)
         {
         }
+        #endregion
 
+        #region Properties
         public string? yeniCezaTuru { get; set; }
         public decimal yeniCezaMiktari { get; set; }
         public DateTime yeniCezaGirisTarihi { get; set; }
-        public DateTime yeniCezaSonOdemeTarihi { get; set; }       
+        public DateTime yeniCezaSonOdemeTarihi { get; set; }
+        #endregion
     }
 }

@@ -8,11 +8,15 @@ namespace TrafikCezaSistemi
 {
     public interface IOdemeBilgileri
     {
+        #region Properties
         int KartNumarası { get; set; }
         int Skt { get; set; }
         int cvv { get; set; }
         float Tutar { get; set; }
-        string OdemeMesaj();
+        #endregion
 
+        #region Methods
+        string OdemeMesaj();
+        #endregion
     }
 }

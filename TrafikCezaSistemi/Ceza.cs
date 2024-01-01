@@ -8,13 +8,16 @@ namespace TrafikCezaSistemi
 {
     public abstract class Ceza
     {
-
+        #region Properties
         public string? Plaka { get; set; }
         public string? CezaTuru { get; set; }
         public decimal CezaMiktari { get; set; }
         public DateTime CezaGirisTarihi { get; set; }
         public DateTime CezaSonOdemeTarihi { get; set; }
-        public abstract string AnaBilgiMesaji();
+        #endregion
 
+        #region Methods
+        public abstract string AnaBilgiMesaji();
+        #endregion
     }
 }
